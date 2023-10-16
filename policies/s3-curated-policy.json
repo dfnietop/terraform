@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::${owner_gobierno}:role/${proyecto}-${dominio}-${ambiente}-lf-register-iam-rol"
+            },
+            "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::${proyecto}-${dominio}-${ambiente}-curated-s3-bk/*",
+                "arn:aws:s3:::${proyecto}-${dominio}-${ambiente}-curated-s3-bk"
+            ]
+        }
+    ]
+}

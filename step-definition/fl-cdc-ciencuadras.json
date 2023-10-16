@@ -1,0 +1,397 @@
+{
+  "Comment": "State Machine for Full Load and CDC DMS ingestion pipeline",
+  "StartAt": "DescribeReplicationTasks",
+  "States": {
+    "DescribeReplicationTasks": {
+      "Type": "Task",
+      "Next": "ReplicationTaskStatusCheck",
+      "Parameters": {
+        "Filters": [
+          {
+            "Name": "replication-task-arn",
+            "Values": [
+              "${replication_task_arn}"
+            ]
+          }
+        ],
+        "Marker": "string",
+        "MaxRecords": 20,
+        "WithoutSettings": true
+      },
+      "Resource": "arn:aws:states:::aws-sdk:databasemigration:describeReplicationTasks"
+    },
+    "ReplicationTaskStatusCheck": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "And": [
+            {
+              "Variable": "$.ReplicationTasks[0].Status",
+              "StringEquals": "running"
+            },
+            {
+              "Variable": "$.ReplicationTasks[0].ReplicationTaskStats.FullLoadProgressPercent",
+              "NumericEquals": 100
+            }
+          ],
+          "Next": "DescribeGlueJobCDC",
+          "Comment": "If DMS is running AND on CDC mode, run CDC glue job"
+        },
+        {
+          "Or": [
+            {
+              "Variable": "$.ReplicationTasks[0].Status",
+              "StringEquals": "stopped"
+            },
+            {
+              "Variable": "$.ReplicationTasks[0].Status",
+              "StringEquals": "ready"
+            }
+          ],
+          "Next": "StartFLReplicationTask",
+          "Comment": "If DMS is ready OR stopped, Run full load"
+        },
+        {
+          "Variable": "$.ReplicationTasks[0].Status",
+          "StringEquals": "failed",
+          "Next": "DMSGeneralFail",
+          "Comment": "If Fails go to Fail State"
+        }
+      ],
+      "Default": "WaitDMSStatusUpdate"
+    },
+
+    "WaitDMSStatusUpdate": {
+      "Type": "Wait",
+      "Seconds": 20,
+      "Next": "DescribeReplicationTasks"
+    },
+
+    "DescribeGlueJobCDC": {
+      "Type": "Task",
+      "Next": "GlueJobStatusCheck",
+      "Parameters": {
+        "JobName": "${cdc_job_name}"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:glue:getJobRuns"
+    },
+    "GlueJobStatusCheck": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "And": [
+            {
+              "Variable": "$.JobRuns[0].JobRunState",
+              "IsPresent": true
+            },
+            {
+              "Variable": "$.JobRuns[0].JobRunState",
+              "StringEquals": "RUNNING"
+            }
+          ],
+          "Next": "WaitGlueJobCDCStatusUpdate"
+        }
+      ],
+      "Default": "StartGluejobCDC"
+    },
+    "StartGluejobCDC": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "${cdc_job_name}"
+      },
+      "Next": "ParallelGlueProducts",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "GlueCDCFail"
+        }
+      ]
+    },
+    "WaitGlueJobCDCStatusUpdate": {
+      "Type": "Wait",
+      "Seconds": 60,
+      "Next": "DescribeGlueJobCDC"
+    },
+    "StartFLReplicationTask": {
+      "Type": "Task",
+      "Parameters": {
+        "ReplicationTaskArn": "${replication_task_arn}",
+        "StartReplicationTaskType": "reload-target"
+      },
+      "Resource": "arn:aws:states:::aws-sdk:databasemigration:startReplicationTask",
+      "Next": "DescribeFLReplicationTask"
+    },
+    "DescribeFLReplicationTask": {
+      "Type": "Task",
+      "Next": "FLReplicationTaskStatusCheck",
+      "Parameters": {
+        "Filters": [
+          {
+            "Name": "replication-task-arn",
+            "Values": [
+              "${replication_task_arn}"
+            ]
+          }
+        ],
+        "Marker": "string",
+        "MaxRecords": 20,
+        "WithoutSettings": true
+      },
+      "Resource": "arn:aws:states:::aws-sdk:databasemigration:describeReplicationTasks"
+    },
+    "FLReplicationTaskStatusCheck": {
+      "Type": "Choice",
+      "Choices": [
+        {
+          "And": [
+            {
+              "Variable": "$.ReplicationTasks[0].Status",
+              "StringEquals": "running"
+            },
+            {
+              "Variable": "$.ReplicationTasks[0].ReplicationTaskStats.FullLoadProgressPercent",
+              "NumericEquals": 100
+            }
+          ],
+          "Next": "StartGlueJobFL"
+        },
+        {
+          "Variable": "$.ReplicationTasks[0].Status",
+          "StringEquals": "failed",
+          "Next": "DMSFullLoadFail"
+        }
+      ],
+      "Default": "WaitFLReplicationTaskStatusUpdate"
+    },
+    "StartGlueJobFL": {
+      "Type": "Task",
+      "Resource": "arn:aws:states:::glue:startJobRun.sync",
+      "Parameters": {
+        "JobName": "${fl_job_name}"
+      },
+      "Next": "ParallelGlueProducts",
+      "Catch": [
+        {
+          "ErrorEquals": [
+            "States.ALL"
+          ],
+          "Next": "GlueFLFail"
+        }
+      ]
+    },
+    "ParallelGlueProducts":{
+      "Type": "Parallel",
+      "Next": "ProductJobMap",
+      "Branches": [
+        {
+          "StartAt": "StartGlueJobInmuebles",
+          "States": {
+            "StartGlueJobInmuebles": {
+              "Type" : "Task",
+              "Resource" : "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters" : {
+                "JobName" : "${inmuebles_job_name}"
+              },
+              "Catch": [ {
+                "ErrorEquals": ["States.ALL"],
+                "Next": "fallbackInmuebles"
+             } ],
+              "End": true
+            },
+            "fallbackInmuebles" : {
+              "Type": "Pass",
+              "Parameters": {
+                "JobResult.$": "States.StringToJson($.Cause)"
+              },
+              "ResultPath": "$",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "StartGlueJobUsuarios",
+          "States": {
+            "StartGlueJobUsuarios": {
+              "Type" : "Task",
+              "Resource" : "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters" : {
+                "JobName" : "${usuarios_job_name}"
+              },
+              "Catch": [ {
+                "ErrorEquals": ["States.ALL"],
+                "Next": "fallbackUsuarios"
+             } ],
+              "End": true
+            },
+            "fallbackUsuarios" : {
+              "Type": "Pass",
+              "Parameters": {
+                "JobResult.$": "States.StringToJson($.Cause)"
+              },
+              "ResultPath": "$",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "StartGlueJobLeads",
+          "States": {
+            "StartGlueJobLeads": {
+              "Type" : "Task",
+              "Resource" : "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters" : {
+                "JobName" : "${leads_job_name}"
+              },
+              "Catch": [ {
+                "ErrorEquals": ["States.ALL"],
+                "Next": "fallbackLeads"
+             } ],
+              "End": true
+            },
+            "fallbackLeads" : {
+              "Type": "Pass",
+              "Parameters": {
+                "JobResult.$": "States.StringToJson($.Cause)"
+              },
+              "ResultPath": "$",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "StartGlueJobuser_plans",
+          "States": {
+            "StartGlueJobuser_plans": {
+              "Type" : "Task",
+              "Resource" : "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters" : {
+                "JobName" : "${user_plans_job_name}"
+              },
+              "Catch": [ {
+                "ErrorEquals": ["States.ALL"],
+                "Next": "fallbackuser_plans"
+             } ],
+              "End": true
+            },
+            "fallbackuser_plans" : {
+              "Type": "Pass",
+              "Parameters": {
+                "JobResult.$": "States.StringToJson($.Cause)"
+              },
+              "ResultPath": "$",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "StartGlueJobperfilamiento_cliente",
+          "States": {
+            "StartGlueJobperfilamiento_cliente": {
+              "Type" : "Task",
+              "Resource" : "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters" : {
+                "JobName" : "${perfilamiento_cliente_job_name}"
+              },
+              "Catch": [ {
+                "ErrorEquals": ["States.ALL"],
+                "Next": "fallbackperfilamiento_cliente"
+             } ],
+              "End": true
+            },
+            "fallbackperfilamiento_cliente" : {
+              "Type": "Pass",
+              "Parameters": {
+                "JobResult.$": "States.StringToJson($.Cause)"
+              },
+              "ResultPath": "$",
+              "End": true
+            }
+          }
+        },
+        {
+          "StartAt": "StartGlueJobofertas",
+          "States": {
+            "StartGlueJobofertas": {
+              "Type" : "Task",
+              "Resource" : "arn:aws:states:::glue:startJobRun.sync",
+              "Parameters" : {
+                "JobName" : "${ofertas_job_name}"
+              },
+              "Catch": [ {
+                "ErrorEquals": ["States.ALL"],
+                "Next": "fallbackofertas"
+             } ],
+              "End": true
+            },
+            "fallbackofertas" : {
+              "Type": "Pass",
+              "Parameters": {
+                "JobResult.$": "States.StringToJson($.Cause)"
+              },
+              "ResultPath": "$",
+              "End": true
+            }
+          }
+        }
+      ]
+    },
+    "ProductJobMap" : {
+      "Type": "Map",
+      "ItemProcessor": {
+        "ProcessorConfig": {
+          "Mode": "INLINE"
+        },
+      "StartAt": "ProductJobValidate",
+      "States": {
+        "ProductJobValidate": {
+          "Type": "Choice",
+          "Choices": [
+            {
+              "And": [
+                {
+                  "Variable": "$.JobRunState",
+                  "IsPresent": true
+                },
+                {
+                  "Variable": "$.JobRunState",
+                  "StringEquals": "SUCCEEDED"
+                }
+              ],
+              "Next": "Success"
+            }
+          ],
+          "Default": "Fail"
+        },
+        "Success": {
+          "Type": "Succeed"
+        },
+        "Fail": {
+          "Type": "Fail"
+        }
+      }
+    },
+    "End": true
+  },
+    "WaitFLReplicationTaskStatusUpdate": {
+      "Type": "Wait",
+      "Seconds": 60,
+      "Next": "DescribeFLReplicationTask"
+    },
+    "GlueFLFail": {
+      "Type": "Fail"
+    },
+    "GlueCDCFail": {
+      "Type": "Fail"
+    },
+    "DMSFullLoadFail": {
+      "Type": "Fail"
+    },
+    "DMSGeneralFail": {
+      "Type": "Pass",
+      "Next": "StartFLReplicationTask"
+    }
+  }
+}

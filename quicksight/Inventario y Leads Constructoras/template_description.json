@@ -1,0 +1,96 @@
+{
+    "Status": 200,
+    "Template": {
+        "Arn": "arn:aws:quicksight:us-east-1:415231494060:template/48d8ad63-2470-4b69-bd56-88ec34de23da",
+        "Version": {
+            "CreatedTime": "2023-07-05T12:56:18.577000-05:00",
+            "VersionNumber": 1,
+            "Status": "CREATION_SUCCESSFUL",
+            "DataSetConfigurations": [
+                {
+                    "Placeholder": "e1f8663d-d988-4dcb-99c6-21bfce78c5f4",
+                    "DataSetSchema": {
+                        "ColumnSchemaList": [
+                            {
+                                "Name": "Lead",
+                                "DataType": "DATETIME"
+                            },
+                            {
+                                "Name": "ds_status",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "id_publication",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "id_publication[ciencuadras_products_leads_glue_tb]",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_parking_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "ds_type",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_name",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "Company Name",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_bathroom_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "nm_property_selling_price",
+                                "DataType": "DECIMAL"
+                            },
+                            {
+                                "Name": "ds_property_project_status",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_built_area",
+                                "DataType": "DECIMAL"
+                            },
+                            {
+                                "Name": "nm_bedroom_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "MonoLead",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_city_name[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_property_project_name",
+                                "DataType": "STRING"
+                            }
+                        ]
+                    },
+                    "ColumnGroupSchemaList": []
+                }
+            ],
+            "SourceEntityArn": "arn:aws:quicksight:us-east-1:415231494060:analysis/56107b6f-a31a-4e92-b7cd-fadd1eb504b0",
+            "Sheets": [
+                {
+                    "SheetId": "ed33d953-660d-4038-a65d-a967b2b49ae6",
+                    "Name": "Constructoras"
+                }
+            ]
+        },
+        "TemplateId": "48d8ad63-2470-4b69-bd56-88ec34de23da",
+        "LastUpdatedTime": "2023-07-05T12:56:20.618000-05:00",
+        "CreatedTime": "2023-07-05T12:56:18.572000-05:00"
+    },
+    "RequestId": "7d38b050-56d6-4ab2-9340-4109655155b1"
+}

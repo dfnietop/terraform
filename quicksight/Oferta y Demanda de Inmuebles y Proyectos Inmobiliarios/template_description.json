@@ -1,0 +1,188 @@
+{
+    "Status": 200,
+    "Template": {
+        "Arn": "arn:aws:quicksight:us-east-1:415231494060:template/7bd5d627-e2c3-474d-89bd-246ed585090f",
+        "Version": {
+            "CreatedTime": "2023-07-05T12:53:42.113000-05:00",
+            "VersionNumber": 1,
+            "Status": "CREATION_SUCCESSFUL",
+            "DataSetConfigurations": [
+                {
+                    "Placeholder": "a7799c40-28d2-4bdd-9d5c-fd993351626b",
+                    "DataSetSchema": {
+                        "ColumnSchemaList": [
+                            {
+                                "Name": "nm_balcony_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "fl_has_pool",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_has_service_room",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_terrace_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "fl_has_home_appliances",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "CreationLeadDate",
+                                "DataType": "DATETIME"
+                            },
+                            {
+                                "Name": "fl_has_green_zones",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_state_name",
+                                "DataType": "STRING",
+                                "GeographicRole": "STATE"
+                            },
+                            {
+                                "Name": "fl_has_social_room",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "dt_creation_date[ciencuadras_products_leads_glue_tb]",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "ds_city_name",
+                                "DataType": "STRING",
+                                "GeographicRole": "CITY"
+                            },
+                            {
+                                "Name": "nm_property_selling_price",
+                                "DataType": "DECIMAL"
+                            },
+                            {
+                                "Name": "fl_has_service_bathroom",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_elevator_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "ds_publication_site_store",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_neighborhood",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_bedroom_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "ds_publication_status",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "cd_neighborhood_economic_level",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "id_app_identification_number",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_visitors_parking_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "id_user_app_identification_number",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "id_publication",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_country",
+                                "DataType": "STRING",
+                                "GeographicRole": "COUNTY"
+                            },
+                            {
+                                "Name": "nm_parking_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "fl_has_reception",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_has_air_conditioner",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_has_gym",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_is_pet_allowed",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_storage_room_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "nm_bathroom_number",
+                                "DataType": "INTEGER"
+                            },
+                            {
+                                "Name": "ds_property_type",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_has_communal_living",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_has_children_zone",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "nm_built_area",
+                                "DataType": "DECIMAL"
+                            },
+                            {
+                                "Name": "CreationStockDate",
+                                "DataType": "DATETIME"
+                            },
+                            {
+                                "Name": "ds_district_division",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "fl_has_laundry_area",
+                                "DataType": "STRING"
+                            }
+                        ]
+                    },
+                    "ColumnGroupSchemaList": []
+                }
+            ],
+            "SourceEntityArn": "arn:aws:quicksight:us-east-1:415231494060:analysis/b1a493a7-0951-437b-819d-eda10a220f73",
+            "ThemeArn": "arn:aws:quicksight::aws:theme/CLASSIC",
+            "Sheets": [
+                {
+                    "SheetId": "32990dac-a3c1-45fe-b84a-2ce2c08d9dd6",
+                    "Name": "General"
+                }
+            ]
+        },
+        "TemplateId": "7bd5d627-e2c3-474d-89bd-246ed585090f",
+        "LastUpdatedTime": "2023-07-05T12:53:44.121000-05:00",
+        "CreatedTime": "2023-07-05T12:53:42.108000-05:00"
+    },
+    "RequestId": "0f73c48d-b3cf-4894-8871-b9987cde38cc"
+}

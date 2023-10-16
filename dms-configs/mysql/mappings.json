@@ -1,0 +1,463 @@
+{
+    "rules": [
+        {
+            "rule-type": "selection",
+            "rule-id": "280176829",
+            "rule-name": "280176829",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "producto_carrito"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "280117517",
+            "rule-name": "280117517",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "s_estado_proyecto"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "280110523",
+            "rule-name": "280110523",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "inmuebles_tipo"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "280103847",
+            "rule-name": "280103847",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "definicion_caracteristicas"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "280071861",
+            "rule-name": "280071861",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "tipo_documento"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "280042867",
+            "rule-name": "280042867",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "s_estrato"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "280024350",
+            "rule-name": "280024350",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "departamento"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "transformation",
+            "rule-id": "038682741",
+            "rule-name": "038682741",
+            "rule-target": "column",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "rol",
+                "column-name": "fecha"
+            },
+            "rule-action": "change-data-type",
+            "data-type": {
+                "type": "string",
+                "length": "25",
+                "scale": ""
+            }
+        },
+        {
+            "rule-type": "transformation",
+            "rule-id": "038637485",
+            "rule-name": "038637485",
+            "rule-target": "column",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "localidad",
+                "column-name": "fecha"
+            },
+            "rule-action": "change-data-type",
+            "data-type": {
+                "type": "string",
+                "length": "25",
+                "scale": ""
+            }
+        },
+        {
+            "rule-type": "transformation",
+            "rule-id": "038554812",
+            "rule-name": "038554812",
+            "rule-target": "column",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "contacto",
+                "column-name": "fecha_leido"
+            },
+            "rule-action": "change-data-type",
+            "data-type": {
+                "type": "string",
+                "length": "25",
+                "scale": ""
+            }
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033148698",
+            "rule-name": "033148698",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "tipo_usuario"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033142003",
+            "rule-name": "033142003",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "tipo_producto_portafolio"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033136150",
+            "rule-name": "033136150",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "rol"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033129757",
+            "rule-name": "033129757",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "localidad"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033121986",
+            "rule-name": "033121986",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "habeas_data"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033115659",
+            "rule-name": "033115659",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "estado_portafolio_producto"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033109514",
+            "rule-name": "033109514",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "contacto_proyecto"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "033096035",
+            "rule-name": "033096035",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "contacto"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "transformation",
+            "rule-id": "1",
+            "rule-name": "1",
+            "rule-target": "column",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "ciudad",
+                "column-name": "fecha"
+            },
+            "rule-action": "change-data-type",
+            "data-type": {
+                "type": "string",
+                "length": "25",
+                "scale": ""
+            }
+        },
+        {
+            "rule-type": "transformation",
+            "rule-id": "2",
+            "rule-name": "2",
+            "rule-target": "column",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "barrio",
+                "column-name": "fecha"
+            },
+            "rule-action": "change-data-type",
+            "data-type": {
+                "type": "string",
+                "length": "25",
+                "scale": ""
+            }
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "3",
+            "rule-name": "3",
+            "object-locator": {
+                "schema-name": "clientes",
+                "table-name": "perfilamiento_cliente"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "6",
+            "rule-name": "6",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "usuario"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "7",
+            "rule-name": "7",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "transaccion_carrito"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "9",
+            "rule-name": "9",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "s_tipo_inmueble"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "10",
+            "rule-name": "10",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "proyectos"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "11",
+            "rule-name": "11",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "portafolio_productos_usuario"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "12",
+            "rule-name": "12",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "plan"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "13",
+            "rule-name": "13",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "perfilamiento_cliente"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "14",
+            "rule-name": "14",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "ofertas"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "15",
+            "rule-name": "15",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "inmueble"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "20",
+            "rule-name": "20",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "detalle_caracteristicas_inmueble"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "21",
+            "rule-name": "21",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "ciudad"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "22",
+            "rule-name": "22",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "caracteristicas_tipo"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "23",
+            "rule-name": "23",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "barrio"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "25",
+            "rule-name": "25",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "detalle_transaccion_carrito"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "26",
+            "rule-name": "26",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "ofertas_tipos_rechazo"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "27",
+            "rule-name": "27",
+            "object-locator": {
+                "schema-name": "c1cc_new",
+                "table-name": "plan_producto"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "28",
+            "rule-name": "28",
+            "object-locator": {
+                "schema-name": "clientes",
+                "table-name": "correo_contacto_cliente"
+            },
+            "rule-action": "include",
+            "filters": []
+        },
+        {
+            "rule-type": "selection",
+            "rule-id": "29",
+            "rule-name": "29",
+            "object-locator": {
+                "schema-name": "clientes",
+                "table-name": "cliente"
+            },
+            "rule-action": "include",
+            "filters": []
+        }
+    ]
+}

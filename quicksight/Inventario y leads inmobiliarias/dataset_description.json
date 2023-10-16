@@ -1,0 +1,1753 @@
+{
+    "Status": 200,
+    "DataSet": {
+        "Arn": "arn:aws:quicksight:us-east-1:415231494060:dataset/e78e34f7-e1cc-45b8-9097-6185faae9eee",
+        "DataSetId": "e78e34f7-e1cc-45b8-9097-6185faae9eee",
+        "Name": "ciencuadras_products_inmobiliarias_ds",
+        "CreatedTime": "2023-07-10T10:51:30.824000-05:00",
+        "LastUpdatedTime": "2023-07-18T14:18:45.402000-05:00",
+        "PhysicalTableMap": {
+            "2f9770cd-1288-4e53-8236-0fd5724ca80e": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:415231494060:datasource/28818874-9c92-4e6b-be8b-93d66f6c0a52",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "rl_ciencuadras_glue_db",
+                    "Name": "ciencuadras_products_service_catalog_glue_tb",
+                    "InputColumns": [
+                        {
+                            "Name": "_hoodie_commit_time",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_commit_seqno",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_record_key",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_partition_path",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_file_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_service",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "tx_description",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "nm_price",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_validity_period",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "ds_unit_validity_period",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "tx_terms_conditions",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "tx_detailed_description",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "tx_relevant_characteristics",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "dt_creation_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_modification_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_date_time",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_hudi_date_time",
+                            "Type": "INTEGER"
+                        }
+                    ]
+                }
+            },
+            "75e11e73-e5c7-40af-a1ce-e0160a4995bf": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:415231494060:datasource/28818874-9c92-4e6b-be8b-93d66f6c0a52",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "rl_ciencuadras_glue_db",
+                    "Name": "ciencuadras_products_leads_glue_tb",
+                    "InputColumns": [
+                        {
+                            "Name": "_hoodie_commit_time",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_commit_seqno",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_record_key",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_partition_path",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_file_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_app_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_identification_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_email",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_nombre",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_cellphone_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "tx_message",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_user_app_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_publication",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_is_registered_user",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "dt_creation_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_date_time",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_hudi_date_time",
+                            "Type": "INTEGER"
+                        }
+                    ]
+                }
+            },
+            "a12ea3b7-98fe-4157-99d9-8d0e3989d928": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:415231494060:datasource/28818874-9c92-4e6b-be8b-93d66f6c0a52",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "rl_ciencuadras_glue_db",
+                    "Name": "ciencuadras_products_properties_and_projects_glue_tb",
+                    "InputColumns": [
+                        {
+                            "Name": "_hoodie_commit_time",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_commit_seqno",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_record_key",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_partition_path",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_file_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_publication",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_publication_status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_publication_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_publication_site_store",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_publication_owner_app_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_publication_owner_email",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_property_real_state_registration_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_property_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_property_project",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_property_project_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_property_project_status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_property_project_building_class",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_property_project_building_class_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_property_project_building_class_status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_is_property_offer",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_state_dane_code",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_state_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_city_dane_code",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_city_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_neighborhood",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_district_division",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_neighborhood_economic_level",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_address",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_latitude",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_longitude",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "nm_property_selling_price",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_property_monthly_rent_payment",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_property_monthly_administration_fee",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_square_meter_price",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_built_area",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_private_area",
+                            "Type": "DECIMAL"
+                        },
+                        {
+                            "Name": "nm_parking_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_visitors_parking_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_bedroom_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_bathroom_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_property_age",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_balcony_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_terrace_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "fl_is_pet_allowed",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_laundry_area",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_green_zones",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "nm_elevator_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "fl_has_communal_living",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_children_zone",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_pool",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_gym",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_service_room",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_service_bathroom",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_social_room",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_reception",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "nm_storage_room_number",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "fl_has_air_conditioner",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_has_home_appliances",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "nm_publication_days_since_posted",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_property_project_delivery_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_creation_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_modification_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_property_inception_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_property_expiration_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_property_deletion_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_date_time",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_hudi_date_time",
+                            "Type": "INTEGER"
+                        }
+                    ]
+                }
+            },
+            "d3a82e0c-baed-4f2c-8e29-869e948bb33f": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:415231494060:datasource/28818874-9c92-4e6b-be8b-93d66f6c0a52",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "rl_ciencuadras_glue_db",
+                    "Name": "ciencuadras_products_app_users_glue_tb",
+                    "InputColumns": [
+                        {
+                            "Name": "_hoodie_commit_time",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_commit_seqno",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_record_key",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_partition_path",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_file_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_app_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_email",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_identification_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_cellphone_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_phone_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_address",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_city_dane_code",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_city_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "cd_state_dane_code",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_state_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "fl_is_contact_authorization",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_role",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "dt_creation_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_modification_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_date_time",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_hudi_date_time",
+                            "Type": "INTEGER"
+                        }
+                    ]
+                }
+            },
+            "dcb79bd5-70a3-4f74-adb8-0932ac5a2c5e": {
+                "RelationalTable": {
+                    "DataSourceArn": "arn:aws:quicksight:us-east-1:415231494060:datasource/28818874-9c92-4e6b-be8b-93d66f6c0a52",
+                    "Catalog": "AwsDataCatalog",
+                    "Schema": "rl_ciencuadras_glue_db",
+                    "Name": "ciencuadras_products_services_per_user_glue_tb",
+                    "InputColumns": [
+                        {
+                            "Name": "_hoodie_commit_time",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_commit_seqno",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_record_key",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_partition_path",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "_hoodie_file_name",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_service_purchased",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_user_app_identification_number",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "id_service",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "ds_service_type",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "dt_inception_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_expiration_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_purchased_services",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "nm_services_used",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "ds_status",
+                            "Type": "STRING"
+                        },
+                        {
+                            "Name": "dt_creation_date",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_date_time",
+                            "Type": "INTEGER"
+                        },
+                        {
+                            "Name": "dt_product_hudi_date_time",
+                            "Type": "INTEGER"
+                        }
+                    ]
+                }
+            }
+        },
+        "LogicalTableMap": {
+            "1092445a-7db8-493d-ace5-849ef745babb": {
+                "Alias": "ciencuadras_products_app_users_glue_tb",
+                "Source": {
+                    "PhysicalTableId": "d3a82e0c-baed-4f2c-8e29-869e948bb33f"
+                }
+            },
+            "20d3295a-40e5-42d9-844c-5d259a56a1ef": {
+                "Alias": "ciencuadras_products_services_per_user_glue_tb",
+                "DataTransforms": [
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_time",
+                            "NewColumnName": "_hoodie_commit_time[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_seqno",
+                            "NewColumnName": "_hoodie_commit_seqno[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_record_key",
+                            "NewColumnName": "_hoodie_record_key[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_partition_path",
+                            "NewColumnName": "_hoodie_partition_path[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_file_name",
+                            "NewColumnName": "_hoodie_file_name[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_status",
+                            "NewColumnName": "ds_status[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_creation_date",
+                            "NewColumnName": "dt_creation_date[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_date_time",
+                            "NewColumnName": "dt_product_date_time[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_hudi_date_time",
+                            "NewColumnName": "dt_product_hudi_date_time[ciencuadras_products_services_per_user_glue_tb]"
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "dcb79bd5-70a3-4f74-adb8-0932ac5a2c5e"
+                }
+            },
+            "35b7ecb7-7a80-46ea-836d-5be353bd1887": {
+                "Alias": "ciencuadras_products_leads_glue_tb",
+                "DataTransforms": [
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_time",
+                            "NewColumnName": "_hoodie_commit_time[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_seqno",
+                            "NewColumnName": "_hoodie_commit_seqno[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_record_key",
+                            "NewColumnName": "_hoodie_record_key[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_partition_path",
+                            "NewColumnName": "_hoodie_partition_path[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_file_name",
+                            "NewColumnName": "_hoodie_file_name[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "id_app_identification_number",
+                            "NewColumnName": "id_app_identification_number[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "cd_identification_type",
+                            "NewColumnName": "cd_identification_type[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "cd_identification_number",
+                            "NewColumnName": "cd_identification_number[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_email",
+                            "NewColumnName": "ds_email[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_cellphone_number",
+                            "NewColumnName": "ds_cellphone_number[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "id_user_app_identification_number",
+                            "NewColumnName": "id_user_app_identification_number[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_creation_date",
+                            "NewColumnName": "dt_creation_date[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_date_time",
+                            "NewColumnName": "dt_product_date_time[ciencuadras_products_leads_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_hudi_date_time",
+                            "NewColumnName": "dt_product_hudi_date_time[ciencuadras_products_leads_glue_tb]"
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "75e11e73-e5c7-40af-a1ce-e0160a4995bf"
+                }
+            },
+            "4fa9e3c8-a44f-4561-ae4e-d4c7bbfcb56c": {
+                "Alias": "Intermediate Table",
+                "Source": {
+                    "JoinInstruction": {
+                        "LeftOperand": "1092445a-7db8-493d-ace5-849ef745babb",
+                        "RightOperand": "20d3295a-40e5-42d9-844c-5d259a56a1ef",
+                        "Type": "INNER",
+                        "OnClause": "{id_app_identification_number} = {id_user_app_identification_number}"
+                    }
+                }
+            },
+            "63e89cb7-8cfa-4f12-9a12-73981825eb0d": {
+                "Alias": "Intermediate Table (4)",
+                "DataTransforms": [
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "DateUser",
+                                    "ColumnId": "ce4ad215-970b-4b17-91c7-7ec72aa2b45f",
+                                    "Expression": "epochDate(dt_creation_date)"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "DateLead",
+                                    "ColumnId": "31aa34c6-5f26-414e-aa12-6208f77bdaa3",
+                                    "Expression": "epochDate({dt_creation_date[ciencuadras_products_leads_glue_tb]})"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "ds_country",
+                                    "ColumnId": "a155950a-bb58-48e6-9a41-a1b1ccb66cfc",
+                                    "Expression": "'Colombia'"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "CreateColumnsOperation": {
+                            "Columns": [
+                                {
+                                    "ColumnName": "NombreInmobiliaria",
+                                    "ColumnId": "c04b278d-f594-4b98-a149-483c6c1d32dc",
+                                    "Expression": "toUpper({ds_name})"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "TagColumnOperation": {
+                            "ColumnName": "ds_city_name",
+                            "Tags": [
+                                {
+                                    "ColumnGeographicRole": "CITY"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "TagColumnOperation": {
+                            "ColumnName": "ds_state_name",
+                            "Tags": [
+                                {
+                                    "ColumnGeographicRole": "STATE"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "TagColumnOperation": {
+                            "ColumnName": "ds_latitude",
+                            "Tags": [
+                                {
+                                    "ColumnGeographicRole": "LATITUDE"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "TagColumnOperation": {
+                            "ColumnName": "ds_longitude",
+                            "Tags": [
+                                {
+                                    "ColumnGeographicRole": "LONGITUDE"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "TagColumnOperation": {
+                            "ColumnName": "ds_country",
+                            "Tags": [
+                                {
+                                    "ColumnGeographicRole": "COUNTRY"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "FilterOperation": {
+                            "ConditionExpression": "{ds_publication_type}=\"Inmueble\""
+                        }
+                    },
+                    {
+                        "FilterOperation": {
+                            "ConditionExpression": "({ds_type}=\"Inmobiliaria\") OR ({ds_type}=\"Agente independiente\")"
+                        }
+                    },
+                    {
+                        "ProjectOperation": {
+                            "ProjectedColumns": [
+                                "id_app_identification_number",
+                                "ds_email",
+                                "cd_identification_type",
+                                "cd_identification_number",
+                                "ds_type",
+                                "ds_name",
+                                "ds_cellphone_number",
+                                "ds_phone_number",
+                                "ds_address",
+                                "cd_city_dane_code",
+                                "ds_city_name",
+                                "cd_state_dane_code",
+                                "ds_state_name",
+                                "fl_is_contact_authorization",
+                                "ds_role",
+                                "ds_status",
+                                "dt_creation_date",
+                                "id_service_purchased",
+                                "id_user_app_identification_number",
+                                "id_service",
+                                "ds_service_type",
+                                "dt_inception_date",
+                                "dt_expiration_date",
+                                "nm_purchased_services",
+                                "nm_services_used",
+                                "ds_status[ciencuadras_products_services_per_user_glue_tb]",
+                                "dt_creation_date[ciencuadras_products_services_per_user_glue_tb]",
+                                "id_publication[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "ds_publication_status",
+                                "ds_publication_type",
+                                "ds_publication_site_store",
+                                "id_publication_owner_app_identification_number",
+                                "ds_publication_owner_email",
+                                "ds_property_real_state_registration_number",
+                                "ds_property_type",
+                                "id_property_project",
+                                "ds_property_project_name",
+                                "ds_property_project_status",
+                                "id_property_project_building_class",
+                                "ds_property_project_building_class_name",
+                                "ds_property_project_building_class_status",
+                                "fl_is_property_offer",
+                                "cd_state_dane_code[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "ds_state_name[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "cd_city_dane_code[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "ds_city_name[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "ds_neighborhood",
+                                "ds_district_division",
+                                "cd_neighborhood_economic_level",
+                                "ds_address[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "ds_latitude",
+                                "ds_longitude",
+                                "nm_property_selling_price",
+                                "nm_property_monthly_rent_payment",
+                                "nm_property_monthly_administration_fee",
+                                "nm_square_meter_price",
+                                "nm_built_area",
+                                "nm_private_area",
+                                "nm_parking_number",
+                                "nm_visitors_parking_number",
+                                "nm_bedroom_number",
+                                "nm_bathroom_number",
+                                "nm_property_age",
+                                "nm_balcony_number",
+                                "nm_terrace_number",
+                                "fl_is_pet_allowed",
+                                "fl_has_laundry_area",
+                                "fl_has_green_zones",
+                                "nm_elevator_number",
+                                "fl_has_communal_living",
+                                "fl_has_children_zone",
+                                "fl_has_pool",
+                                "fl_has_gym",
+                                "fl_has_service_room",
+                                "fl_has_service_bathroom",
+                                "fl_has_social_room",
+                                "fl_has_reception",
+                                "nm_storage_room_number",
+                                "fl_has_air_conditioner",
+                                "fl_has_home_appliances",
+                                "nm_publication_days_since_posted",
+                                "dt_property_project_delivery_date",
+                                "dt_creation_date[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "dt_modification_date[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "dt_property_inception_date",
+                                "dt_property_expiration_date",
+                                "dt_property_deletion_date",
+                                "id_service[ciencuadras_products_service_catalog_glue_tb]",
+                                "ds_type[ciencuadras_products_service_catalog_glue_tb]",
+                                "Plan",
+                                "tx_description",
+                                "nm_price",
+                                "nm_validity_period",
+                                "ds_unit_validity_period",
+                                "tx_terms_conditions",
+                                "tx_detailed_description",
+                                "tx_relevant_characteristics",
+                                "ds_status[ciencuadras_products_service_catalog_glue_tb]",
+                                "dt_creation_date[ciencuadras_products_service_catalog_glue_tb]",
+                                "id_app_identification_number[ciencuadras_products_leads_glue_tb]",
+                                "cd_identification_type[ciencuadras_products_leads_glue_tb]",
+                                "cd_identification_number[ciencuadras_products_leads_glue_tb]",
+                                "ds_email[ciencuadras_products_leads_glue_tb]",
+                                "ds_nombre",
+                                "ds_cellphone_number[ciencuadras_products_leads_glue_tb]",
+                                "tx_message",
+                                "id_user_app_identification_number[ciencuadras_products_leads_glue_tb]",
+                                "id_publication",
+                                "fl_is_registered_user",
+                                "dt_creation_date[ciencuadras_products_leads_glue_tb]",
+                                "DateUser",
+                                "DateLead",
+                                "ds_country",
+                                "NombreInmobiliaria"
+                            ]
+                        }
+                    }
+                ],
+                "Source": {
+                    "JoinInstruction": {
+                        "LeftOperand": "a8345bf8-878b-4aad-aeb3-41787880557d",
+                        "RightOperand": "35b7ecb7-7a80-46ea-836d-5be353bd1887",
+                        "Type": "INNER",
+                        "OnClause": "{id_publication[ciencuadras_products_properties_and_projects_glue_tb]} = {id_publication}"
+                    }
+                }
+            },
+            "7174b581-0c36-496d-a169-f4c011309fb4": {
+                "Alias": "Intermediate Table (2)",
+                "Source": {
+                    "JoinInstruction": {
+                        "LeftOperand": "4fa9e3c8-a44f-4561-ae4e-d4c7bbfcb56c",
+                        "RightOperand": "772c9d84-7d00-43e7-b0aa-0f4696433655",
+                        "Type": "INNER",
+                        "OnClause": "{id_app_identification_number} = {id_publication_owner_app_identification_number}"
+                    }
+                }
+            },
+            "772c9d84-7d00-43e7-b0aa-0f4696433655": {
+                "Alias": "ciencuadras_products_properties_and_projects_glue_tb",
+                "DataTransforms": [
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_time",
+                            "NewColumnName": "_hoodie_commit_time[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_seqno",
+                            "NewColumnName": "_hoodie_commit_seqno[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_record_key",
+                            "NewColumnName": "_hoodie_record_key[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_partition_path",
+                            "NewColumnName": "_hoodie_partition_path[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_file_name",
+                            "NewColumnName": "_hoodie_file_name[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "id_publication",
+                            "NewColumnName": "id_publication[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "cd_state_dane_code",
+                            "NewColumnName": "cd_state_dane_code[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_state_name",
+                            "NewColumnName": "ds_state_name[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "cd_city_dane_code",
+                            "NewColumnName": "cd_city_dane_code[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_city_name",
+                            "NewColumnName": "ds_city_name[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_address",
+                            "NewColumnName": "ds_address[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "ds_latitude",
+                            "NewColumnType": "DECIMAL"
+                        }
+                    },
+                    {
+                        "CastColumnTypeOperation": {
+                            "ColumnName": "ds_longitude",
+                            "NewColumnType": "DECIMAL"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_creation_date",
+                            "NewColumnName": "dt_creation_date[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_modification_date",
+                            "NewColumnName": "dt_modification_date[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_date_time",
+                            "NewColumnName": "dt_product_date_time[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_hudi_date_time",
+                            "NewColumnName": "dt_product_hudi_date_time[ciencuadras_products_properties_and_projects_glue_tb]"
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "a12ea3b7-98fe-4157-99d9-8d0e3989d928"
+                }
+            },
+            "a8345bf8-878b-4aad-aeb3-41787880557d": {
+                "Alias": "Intermediate Table (3)",
+                "Source": {
+                    "JoinInstruction": {
+                        "LeftOperand": "7174b581-0c36-496d-a169-f4c011309fb4",
+                        "RightOperand": "f4372238-c15a-4c66-8b52-7759c9fbe949",
+                        "Type": "INNER",
+                        "OnClause": "{id_service} = {id_service[ciencuadras_products_service_catalog_glue_tb]}"
+                    }
+                }
+            },
+            "f4372238-c15a-4c66-8b52-7759c9fbe949": {
+                "Alias": "ciencuadras_products_service_catalog_glue_tb",
+                "DataTransforms": [
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_time",
+                            "NewColumnName": "_hoodie_commit_time[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_commit_seqno",
+                            "NewColumnName": "_hoodie_commit_seqno[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_record_key",
+                            "NewColumnName": "_hoodie_record_key[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_partition_path",
+                            "NewColumnName": "_hoodie_partition_path[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "_hoodie_file_name",
+                            "NewColumnName": "_hoodie_file_name[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "id_service",
+                            "NewColumnName": "id_service[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_type",
+                            "NewColumnName": "ds_type[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_name",
+                            "NewColumnName": "Plan"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "ds_status",
+                            "NewColumnName": "ds_status[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_creation_date",
+                            "NewColumnName": "dt_creation_date[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_modification_date",
+                            "NewColumnName": "dt_modification_date[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_date_time",
+                            "NewColumnName": "dt_product_date_time[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    },
+                    {
+                        "RenameColumnOperation": {
+                            "ColumnName": "dt_product_hudi_date_time",
+                            "NewColumnName": "dt_product_hudi_date_time[ciencuadras_products_service_catalog_glue_tb]"
+                        }
+                    }
+                ],
+                "Source": {
+                    "PhysicalTableId": "2f9770cd-1288-4e53-8236-0fd5724ca80e"
+                }
+            }
+        },
+        "OutputColumns": [
+            {
+                "Name": "id_app_identification_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_email",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_identification_type",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_identification_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_type",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_name",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_cellphone_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_phone_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_address",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_city_dane_code",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_city_name",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_state_dane_code",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_state_name",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_is_contact_authorization",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_role",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_status",
+                "Type": "STRING"
+            },
+            {
+                "Name": "dt_creation_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "id_service_purchased",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_user_app_identification_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_service",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_service_type",
+                "Type": "STRING"
+            },
+            {
+                "Name": "dt_inception_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_expiration_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_purchased_services",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_services_used",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "ds_status[ciencuadras_products_services_per_user_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "dt_creation_date[ciencuadras_products_services_per_user_glue_tb]",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "id_publication[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_publication_status",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_publication_type",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_publication_site_store",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_publication_owner_app_identification_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_publication_owner_email",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_property_real_state_registration_number",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_property_type",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_property_project",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_property_project_name",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_property_project_status",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_property_project_building_class",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_property_project_building_class_name",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_property_project_building_class_status",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_is_property_offer",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_state_dane_code[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_state_name[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_city_dane_code[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_city_name[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_neighborhood",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_district_division",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_neighborhood_economic_level",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_address[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_latitude",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "ds_longitude",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_property_selling_price",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_property_monthly_rent_payment",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_property_monthly_administration_fee",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_square_meter_price",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_built_area",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_private_area",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_parking_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_visitors_parking_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_bedroom_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_bathroom_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_property_age",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_balcony_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "nm_terrace_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "fl_is_pet_allowed",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_laundry_area",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_green_zones",
+                "Type": "STRING"
+            },
+            {
+                "Name": "nm_elevator_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "fl_has_communal_living",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_children_zone",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_pool",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_gym",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_service_room",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_service_bathroom",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_social_room",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_reception",
+                "Type": "STRING"
+            },
+            {
+                "Name": "nm_storage_room_number",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "fl_has_air_conditioner",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_has_home_appliances",
+                "Type": "STRING"
+            },
+            {
+                "Name": "nm_publication_days_since_posted",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_property_project_delivery_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_creation_date[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_modification_date[ciencuadras_products_properties_and_projects_glue_tb]",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_property_inception_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_property_expiration_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "dt_property_deletion_date",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "id_service[ciencuadras_products_service_catalog_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_type[ciencuadras_products_service_catalog_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "Plan",
+                "Type": "STRING"
+            },
+            {
+                "Name": "tx_description",
+                "Type": "STRING"
+            },
+            {
+                "Name": "nm_price",
+                "Type": "DECIMAL"
+            },
+            {
+                "Name": "nm_validity_period",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "ds_unit_validity_period",
+                "Type": "STRING"
+            },
+            {
+                "Name": "tx_terms_conditions",
+                "Type": "STRING"
+            },
+            {
+                "Name": "tx_detailed_description",
+                "Type": "STRING"
+            },
+            {
+                "Name": "tx_relevant_characteristics",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_status[ciencuadras_products_service_catalog_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "dt_creation_date[ciencuadras_products_service_catalog_glue_tb]",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "id_app_identification_number[ciencuadras_products_leads_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_identification_type[ciencuadras_products_leads_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "cd_identification_number[ciencuadras_products_leads_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_email[ciencuadras_products_leads_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_nombre",
+                "Type": "STRING"
+            },
+            {
+                "Name": "ds_cellphone_number[ciencuadras_products_leads_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "tx_message",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_user_app_identification_number[ciencuadras_products_leads_glue_tb]",
+                "Type": "STRING"
+            },
+            {
+                "Name": "id_publication",
+                "Type": "STRING"
+            },
+            {
+                "Name": "fl_is_registered_user",
+                "Type": "STRING"
+            },
+            {
+                "Name": "dt_creation_date[ciencuadras_products_leads_glue_tb]",
+                "Type": "INTEGER"
+            },
+            {
+                "Name": "DateUser",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "DateLead",
+                "Type": "DATETIME"
+            },
+            {
+                "Name": "ds_country",
+                "Type": "STRING"
+            },
+            {
+                "Name": "NombreInmobiliaria",
+                "Type": "STRING"
+            }
+        ],
+        "ImportMode": "SPICE",
+        "ConsumedSpiceCapacityInBytes": 2126569547,
+        "ColumnGroups": [
+            {
+                "GeoSpatialColumnGroup": {
+                    "Name": "ds_country",
+                    "CountryCode": "CO",
+                    "Columns": []
+                }
+            }
+        ],
+        "FieldFolders": {},
+        "DataSetUsageConfiguration": {
+            "DisableUseAsDirectQuerySource": false,
+            "DisableUseAsImportedSource": false
+        }
+    },
+    "RequestId": "442d8556-2428-454a-a453-e37f09135386"
+}

@@ -1,0 +1,68 @@
+{
+    "Status": 200,
+    "Template": {
+        "Arn": "arn:aws:quicksight:us-east-1:415231494060:template/1d6ec5d5-06a3-4efd-b22a-3299f81c10f1",
+        "Version": {
+            "CreatedTime": "2023-07-19T12:04:19.793000-05:00",
+            "VersionNumber": 1,
+            "Status": "CREATION_SUCCESSFUL",
+            "DataSetConfigurations": [
+                {
+                    "Placeholder": "4ae2efb2-7aae-490c-97f9-62998c18b7da",
+                    "DataSetSchema": {
+                        "ColumnSchemaList": [
+                            {
+                                "Name": "ds_property_type",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_publication_site_store",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_type",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_publication_status",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_city_name[ciencuadras_products_properties_and_projects_glue_tb]",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "id_app_identification_number",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "ds_name[ciencuadras_products_service_catalog_glue_tb]",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "id_user_app_identification_number",
+                                "DataType": "STRING"
+                            },
+                            {
+                                "Name": "DateUser",
+                                "DataType": "DATETIME"
+                            }
+                        ]
+                    },
+                    "ColumnGroupSchemaList": []
+                }
+            ],
+            "SourceEntityArn": "arn:aws:quicksight:us-east-1:415231494060:analysis/95847393-7142-406b-b4ea-c59abf5341d4",
+            "Sheets": [
+                {
+                    "SheetId": "eba9666a-a5b3-454b-b33a-b55b0fd110ac",
+                    "Name": "Persona Natural"
+                }
+            ]
+        },
+        "TemplateId": "1d6ec5d5-06a3-4efd-b22a-3299f81c10f1",
+        "LastUpdatedTime": "2023-07-19T12:04:22.553000-05:00",
+        "CreatedTime": "2023-07-19T12:04:19.788000-05:00"
+    },
+    "RequestId": "50cb5253-9498-4d03-8f18-94cab6f288cb"
+}
